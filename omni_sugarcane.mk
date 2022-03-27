@@ -2,11 +2,11 @@
 $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/vsmart/sugarcane/prebuilt/zImage-dtb
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+LOCAL_PATH := device/vsmart/sugarcane
+
+# Kernel
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/zImage-dtb:kernel
 
 # qcom standard decryption
 PRODUCT_PACKAGES += \
