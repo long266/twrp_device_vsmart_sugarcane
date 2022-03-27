@@ -1,0 +1,4 @@
+ro.display.series=vsmart star 3
+ro.product.board=msm8937
+ro.board.platform=msm8937
+vendor.gatekeeper.disable_spu=true
