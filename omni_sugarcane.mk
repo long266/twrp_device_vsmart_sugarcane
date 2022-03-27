@@ -4,10 +4,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 LOCAL_PATH := device/vsmart/sugarcane
 
-# Kernel
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/zImage-dtb:kernel
-
 # qcom standard decryption
 PRODUCT_PACKAGES += \
     qcom_decrypt \
