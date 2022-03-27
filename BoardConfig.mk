@@ -90,3 +90,49 @@ TARGET_USES_LOGD := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
+
+# NOTE:# Don't use '-' or blank spaces in flag values!
+# These will create build errors or other bugs in recovery (Excluding SHRP_PATH,SHRP_REC).
+
+# Device codename
+SHRP_DEVICE_CODE := sugarcane
+
+# Path of your SHRP device tree
+SHRP_PATH := device/vsmart/$(SHRP_DEVICE_CODE)
+
+# Maintainer name
+SHRP_MAINTAINER := Long266
+
+# Recovery Type (for "About" section only)
+SHRP_REC_TYPE := SAR
+
+# Device Type (for "About" section only)
+SHRP_DEVICE_TYPE := A_Only
+
+# Your device's recovery path, dont use blindly
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+
+# Emergency Download mode (0 = no EDL mode, 1 = EDL mode available)
+SHRP_EDL_MODE := 1
+
+# internal storage path
+SHRP_INTERNAL := /sdcard
+
+# If your device has an external sdcard
+SHRP_EXTERNAL := /external_sd
+
+# USB OTG path
+SHRP_OTG := /usb_otg
+
+# Flashlight: (0 = disable, 1 = enable)
+SHRP_FLASH := 0
+
+# SHRP padding flag (for rounded corner devices only)
+SHRP_STATUSBAR_RIGHT_PADDING := 24
+SHRP_STATUSBAR_LEFT_PADDING := 24
+
+# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock
+SHRP_EXPRESS := true
+
+# SHRP Dark mode, use this flag to have dark theme set by default
+SHRP_DARK := true
