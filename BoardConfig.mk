@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_ := device/vsmart/sugarcane
+LOCAL_PATH := device/vsmart/sugarcane
 
 ALLOW_MISSING_DEPENDENCIES := true
 
